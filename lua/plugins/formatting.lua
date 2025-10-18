@@ -8,7 +8,7 @@ return {
             formatters_by_ft = {
                 rust = { "rustfmt" },
                 lua = { "stylua" },
-                typst = { "tinymist" },
+                typst = { "tinymist" }, -- TODO: get tinymist working / configured to use typstyle
                 css = { "prettier" },
                 html = { "prettier" },
                 json = { "prettier" },

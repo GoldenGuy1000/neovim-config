@@ -23,7 +23,7 @@ return {
 
         mason_lspconfig.setup({
             -- list of servers for mason to install
-            ensure_installed = {
+            ensure_installed = { -- TODO: add clangd as an lsp
                 "html",
                 "rust-analyzer",
                 "tinymist",
