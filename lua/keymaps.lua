@@ -3,12 +3,13 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<leader>s", ":w<CR>", { desc = "save file" })
 
-keymap.set({"n", "v"}, "<leader>p", "\"+p", { desc = "System clipboard paste" })
-keymap.set({"n", "v"}, "<leader>P", "\"+P", { desc = "System clipboard paste before" })
-keymap.set({"v"}, "<leader>y", "\"+y", { desc = "System clipboard copy" })
-keymap.set({"v"}, "<C-C>", "\"+y", { desc = "System clipboard copy" })
-
+-- copy-paste
+keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "System clipboard paste" })
+keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "System clipboard paste before" })
+keymap.set({ "v" }, "<leader>y", '"+y', { desc = "System clipboard copy" })
+keymap.set({ "v" }, "<C-C>", '"+y', { desc = "System clipboard copy" })
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
