@@ -25,7 +25,7 @@ return {
             -- list of servers for mason to install
             ensure_installed = { -- TODO: add clangd as an lsp
                 "html",
-                "rust-analyzer",
+                -- "rust-analyzer", -- Install via rustup
                 "tinymist",
             },
         })
@@ -33,7 +33,7 @@ return {
             ensure_installed = {
                 "prettier",
                 "stylua", -- lua formatter
-                "rustfmt",
+                -- "rustfmt", -- Install via rustup
             },
         })
     end,
