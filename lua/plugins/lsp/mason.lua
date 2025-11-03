@@ -26,6 +26,7 @@ return {
             ensure_installed = { -- TODO: add clangd as an lsp
                 "html",
                 -- "rust-analyzer", -- Install via rustup
+                -- "rust-analyzer", -- dosen't exist
                 "tinymist",
             },
         })

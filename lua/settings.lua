@@ -1,6 +1,9 @@
 --Section: some basic config from https://www.josean.com/posts/how-to-setup-neovim-2024
 local opt = vim.opt -- for conciseness
 
+-- sidebar
+opt.signcolumn = "yes"
+
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
