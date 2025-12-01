@@ -25,6 +25,8 @@ return {
             -- list of servers for mason to install
             ensure_installed = { -- TODO: add clangd as an lsp
                 "html",
+                "clangd",
+                "clangd_extensions",
                 -- "rust-analyzer", -- Install via rustup
                 "tinymist",
             },

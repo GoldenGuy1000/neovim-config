@@ -11,6 +11,13 @@ return {
         local mason_lspconfig = require("mason-lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
+        lspconfig.clangd.setup({
+            cmd = {
+                "clangd",
+                "--fallback-style=webkit",
+            },
+        })
+
         local keymap = vim.keymap -- for conciseness
 
         vim.api.nvim_create_autocmd("LspAttach", {
