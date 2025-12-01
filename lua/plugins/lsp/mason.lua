@@ -26,7 +26,6 @@ return {
             ensure_installed = {
                 "html",
                 "clangd",
-                "clangd_extensions",
                 -- "rust-analyzer", -- Install via rustup
                 "tinymist",
             },

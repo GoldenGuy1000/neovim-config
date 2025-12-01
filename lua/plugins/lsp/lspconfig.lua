@@ -7,11 +7,11 @@ return {
         { "folke/neodev.nvim", opts = {} },
     },
     config = function()
-        local lspconfig = require("lspconfig")
+        local lspconfig = vim.lsp.config
         local mason_lspconfig = require("mason-lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-        lspconfig.clangd.setup({
+        lspconfig("clangd", {
             cmd = {
                 "clangd",
                 "--fallback-style=webkit",
