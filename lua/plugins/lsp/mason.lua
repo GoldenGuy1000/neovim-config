@@ -23,7 +23,7 @@ return {
 
         mason_lspconfig.setup({
             -- list of servers for mason to install
-            ensure_installed = { -- TODO: add clangd as an lsp
+            ensure_installed = {
                 "html",
                 "clangd",
                 "clangd_extensions",

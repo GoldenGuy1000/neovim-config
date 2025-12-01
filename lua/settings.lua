@@ -1,4 +1,3 @@
---Section: some basic config from https://www.josean.com/posts/how-to-setup-neovim-2024
 local opt = vim.opt -- for conciseness
 
 -- sidebar
@@ -21,5 +20,8 @@ opt.wrap = true -- enable-disable line wrapping
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
+-- splitting
+opt.splitright = true
+opt.splitbelow = true
+
 opt.backspace = "indent,eol,start"
---EndSection
