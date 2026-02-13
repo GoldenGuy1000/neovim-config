@@ -5,6 +5,9 @@ local keymap = vim.keymap
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<leader>s", ":w<CR>", { desc = "save file" })
 
+keymap.set("v", ">", ">gv")
+keymap.set("v", "<", "<gv")
+
 -- copy-paste
 keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "System clipboard paste" })
 keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "System clipboard paste before" })
