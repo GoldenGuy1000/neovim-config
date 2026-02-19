@@ -3,10 +3,12 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-keymap.set("n", "<leader>s", ":w<CR>", { desc = "save file" })
+-- keymap.set("n", "<leader>s", ":w<CR>", { desc = "save file" })
 
 keymap.set("v", ">", ">gv")
 keymap.set("v", "<", "<gv")
+keymap.set("n", ">", "><space>")
+keymap.set("n", "<", "<<space>")
 
 -- copy-paste
 keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "System clipboard paste" })
