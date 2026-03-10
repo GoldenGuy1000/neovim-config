@@ -4,10 +4,11 @@ local keymap = vim.keymap
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "save file" })
-# testing out the new feature
 
 keymap.set("v", ">", ">gv")
 keymap.set("v", "<", "<gv")
+keymap.set("n", ">", "><space>")
+keymap.set("n", "<", "<<space>")
 
 -- copy-paste
 keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "System clipboard paste" })
