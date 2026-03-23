@@ -16,18 +16,25 @@ keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "System clipboard paste be
 keymap.set({ "v" }, "<leader>y", '"+y', { desc = "System clipboard copy" })
 keymap.set({ "v" }, "<C-C>", '"+y', { desc = "System clipboard copy" })
 
--- window management
+-- split management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
-keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 
--- tab management
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
-keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+keymap.set("n", "<leader>tv", "<C-w>v<cmd>term<CR>i")
+keymap.set("n", "<leader>th", "<C-w>s<cmd>term<CR>i")
+
+keymap.set("n", "<C-,>", "<C-w>3<", { desc = "Shrink window horizontally" })
+keymap.set("n", "<C-.>", "<C-w>3>", { desc = "Grow window horizontally" })
+
+keymap.set("n", "<leader>d", "<cmd>close<CR>", { desc = "Close current split" })
+keymap.set("n", "<leader>q", "<cmd>write<CR><cmd>close<CR>", { desc = "Write-close current split" })
+
+-- tab management -- commented because I don't find myself using tabs
+-- keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+-- keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+-- keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+-- keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+-- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
 -- terminal
-keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Esc to normal mode in terminal" })
+keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", { desc = "Esc to normal mode in terminal" })
